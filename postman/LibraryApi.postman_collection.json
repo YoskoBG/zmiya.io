@@ -1,0 +1,100 @@
+{
+  "info": {
+    "name": "Library API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "Create Book",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/books", "host": ["{{baseUrl}}"], "path": ["api", "books"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Clean Code\",\n  \"isbn\": \"9780132350884\",\n  \"publishYear\": 2008,\n  \"publisherId\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Get Books",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/books", "host": ["{{baseUrl}}"], "path": ["api", "books"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Loans",
+      "item": [
+        {
+          "name": "Create Loan",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/loans", "host": ["{{baseUrl}}"], "path": ["api", "loans"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"memberId\": 1,\n  \"bookCopyId\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Return Loan",
+          "request": {
+            "method": "PUT",
+            "url": { "raw": "{{baseUrl}}/api/loans/1/return", "host": ["{{baseUrl}}"], "path": ["api", "loans", "1", "return"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reservations",
+      "item": [
+        {
+          "name": "Create Reservation",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/reservations", "host": ["{{baseUrl}}"], "path": ["api", "reservations"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"memberId\": 1,\n  \"bookId\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Fulfill Reservation",
+          "request": {
+            "method": "PUT",
+            "url": { "raw": "{{baseUrl}}/api/reservations/1/fulfill", "host": ["{{baseUrl}}"], "path": ["api", "reservations", "1", "fulfill"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "item": [
+        {
+          "name": "Create Payment",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/payments", "host": ["{{baseUrl}}"], "path": ["api", "payments"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loanId\": 1,\n  \"amount\": 5.0,\n  \"method\": \"Cash\"\n}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "https://localhost:5001" }
+  ]
+}

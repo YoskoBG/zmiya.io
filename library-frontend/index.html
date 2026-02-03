@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Library Manager</h1>
+      <p>Минимален фронт-енд за курсовия проект (AI-генериран).</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Книги</h2>
+        <form id="book-form">
+          <input type="text" name="title" placeholder="Заглавие" required />
+          <input type="text" name="isbn" placeholder="ISBN" required />
+          <input type="number" name="publishYear" placeholder="Година" required />
+          <input type="number" name="publisherId" placeholder="Publisher ID" required />
+          <button type="submit">Добави книга</button>
+        </form>
+        <ul id="books-list"></ul>
+      </section>
+
+      <section>
+        <h2>Читатели</h2>
+        <form id="member-form">
+          <input type="text" name="fullName" placeholder="Име" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="text" name="phone" placeholder="Телефон" required />
+          <button type="submit">Регистрирай читател</button>
+        </form>
+        <ul id="members-list"></ul>
+      </section>
+
+      <section>
+        <h2>Заеми</h2>
+        <form id="loan-form">
+          <input type="number" name="memberId" placeholder="Member ID" required />
+          <input type="number" name="bookCopyId" placeholder="BookCopy ID" required />
+          <button type="submit">Създай заем</button>
+        </form>
+        <ul id="loans-list"></ul>
+      </section>
+
+      <section>
+        <h2>Резервации</h2>
+        <form id="reservation-form">
+          <input type="number" name="memberId" placeholder="Member ID" required />
+          <input type="number" name="bookId" placeholder="Book ID" required />
+          <button type="submit">Резервирай книга</button>
+        </form>
+        <ul id="reservations-list"></ul>
+      </section>
+
+      <section>
+        <h2>Плащания</h2>
+        <form id="payment-form">
+          <input type="number" name="loanId" placeholder="Loan ID" required />
+          <input type="number" step="0.01" name="amount" placeholder="Сума" required />
+          <select name="method">
+            <option value="Cash">Cash</option>
+            <option value="Card">Card</option>
+          </select>
+          <button type="submit">Плати</button>
+        </form>
+        <ul id="payments-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>API Base URL: <code id="api-base"></code></p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

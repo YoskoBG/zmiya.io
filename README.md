@@ -2,6 +2,10 @@
 
 Topics: mt5, metatrader5, forex, mql5-automated-trading, smart-money, mt5-algorithmic-trading, indicators, liquidity, order-block, expert-advisors, institutional-order-flow, mt5-structure-engine, trading-indicator, liquidity-mapping, supply-demand, mt5-smc-logic, market-imbalance-tool, smart-money-visualization, mql5-smc-indicator
 
+# Information
+
+**Advanced MT5 / MT4 trading tool and indicator suite for forex trading, featuring automation, risk management, trade execution, market analysis, and algorithmic trading capabilities. Designed for modern trading platforms, this project supports traders with tools such as expert advisors (EAs), indicators, scalping systems, position sizing, and real-time trading assistance.**
+
 # 🧠 Smart Money Indicator MT5/MT4
 
 **Advanced Smart Money Concepts (SMC) visualization tool with real-time market structure, liquidity zones, order blocks, and institutional logic simulation. Built for precision traders.**
